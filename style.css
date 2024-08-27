@@ -1,182 +1,57 @@
-/* Styles for the popup form */
-.popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 128, 128, 0.5); /* Teal semi-transparent background */
-    backdrop-filter: blur(5px); /* Blurred background */
-}
-
-.popup-content {
-    margin: 10% auto; /* Centered */
-    padding: 20px;
-    border: none;
-    border-radius: 15px;
-    width: 80%;
-    max-width: 500px;
-    background: linear-gradient(135deg, #00B4DB, #0083B0); /* Attractive gradient background */
-    color: white; /* Text color for contrast */
-    position: relative; /* To position the close button */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Modern shadow for depth */
-    text-align: center;
-    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-#logo img {
-    display: block;
-    margin: 0 auto 20px;
-    max-width: 70%;
-    height: auto;
-}
-
-.popup-elements {
-    margin-top: 20px;
-}
-
-.close {
-    color: #fff;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: white;
-    background-color: #FF6347; /* Red color */
-    border-radius: 50%;
-    padding: 5px;
-}
-
-h1, h3, p {
-    margin: 10px 0;
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 1.2rem;
-}
-
-a {
-    color: #FFD700; /* Gold color for links */
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-a:hover {
-    color: #FFA500; /* Orange color on hover */
-}
-
-p {
-    font-weight: normal;
-    font-size: 1rem;
-}
-
-#admission-link {
-    border: 1px solid #FFD700;
-    padding: 10px 0px;
-    background-color: #FF6347;
-    color: white;
-    font-weight: bold;
-    display: inline-block;
-    width: 80%;
-    text-align: center;
-    margin: 20px auto 0;
-    transition: all 0.3s;
-}
-
-#admission-link a {
-    color: white;
-    text-decoration: none;
-}
-
-#admission-link:hover {
-    background-color: #FFA500;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .popup-content {
-        width: 90%;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    #admission-link {
-        padding: 8px 0;
-        width: 90%;
-    }
-
-    .close {
-        font-size: 20px;
-    }
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: darkblue;
 }
-
-@media (max-width: 480px) {
-    .popup-content {
-        width: 95%;
-        padding: 10px;
+#popup{
+    display: none;
+    z-index: 1;
+    width: 20vw;
+    height: 60vh;
+    background-color: lightgreen;
+    border-radius: 0.7vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fade 3s ease-in-out;
+}
+h1{
+    text-align: center;
+}
+#closeIcon{
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: yellow;
+    border-radius: 50%;
+    padding: 0.3vw;
+    cursor: pointer;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-
-    h1 {
-        font-size: 1.2rem;
-    }
-
-    h3 {
-        font-size: 0.9rem;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
-    #admission-link {
-        padding: 6px 0;
-        width: 95%;
-    }
-
-    .close {
-        font-size: 18px;
+    to{
+        opacity: 1;
+        transform: scale(1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
